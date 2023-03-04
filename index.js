@@ -25,33 +25,39 @@ let taskInput = document.getElementById('task-input');
 let tasks = document.getElementById('tasks');
 const removeTask = document.getElementById('remove-task')
 const btn = document.getElementById('btn');
-let taskArr = [];
 
+btn.addEventListener('click', createListItem)
+// btn.addEventListener('keydown', )
 
+// This function creates the list items and adds it to the body of the tasks
+function createListItem() {
 
-btn.addEventListener('click', () => {
-
-  // Creating the li item
   let taskItem = document.createElement('li');
-   // adding the class names to the list items
-   taskItem.classList.add('task-item', 'hidden')
-  // attaching the list item to the task container
-  tasks.appendChild(taskItem)
- 
+  // adding the class names to the list items
+  taskItem.classList.add('task-item', 'hidden')
+ // attaching the list item to the task container
+ tasks.appendChild(taskItem)
 
-  // This checks to see if the li has the class hidden 
-  if(taskItem.classList.contains('hidden')){
-    // If it does it removes it
-    taskItem.classList.remove('hidden')
-  }
 
-  // This addes the user input into the li and the "x" 
-  let numberOfTask = taskItem.innerHTML = `${taskInput.value} <span id="remove-task"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
-  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+ // This checks to see if the li has the class hidden 
+ if(taskItem.classList.contains('hidden')){
+   // If it does it removes it
+   taskItem.classList.remove('hidden')
+ }
+
+ // This addes the user input into the li and the "x" 
+ let numberOfTask = taskItem.innerHTML = `${taskInput.value} <span id="remove-task"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+ <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+ <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 </svg></span>`;
+}
 
+// Creating a function if the user presses the 'Enter' key to submit the task
+function ifKeyDownEvent(event, createListItem) {
 
-})
+ }
+
+  
+
 
 
