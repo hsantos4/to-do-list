@@ -3,12 +3,16 @@ const btn = document.getElementById('btn');
 let tasks = document.getElementById('tasks');
 let taskArr = [];
 
-console.log(taskInput)
 
-// waits for the button to be clicked and creates a li in the tasks container
+// waits for the button to be clicked 
     btn.addEventListener('click', function() {
+        // creates the html element li
         let liForTask = document.createElement('li');
+        // embeds the newly created li to the div
         tasks.appendChild(liForTask)
-        liForTask.textContent = taskInput.value;
+        // user input is added to the newly created li
+        let listOfTask = liForTask.textContent = taskInput.value;
+        // adding the list to the empty array
+        let updatedList = taskArr.push(listOfTask);
       })
 
