@@ -26,9 +26,10 @@ let tasks = document.getElementById('tasks');
 const removeTask = document.getElementById('remove-task')
 const btn = document.getElementById('btn');
 
+btn.addEventListener('click', createListItem)
 
 // This function creates the list items and adds it to the body of the tasks
-const createListItem = () => {
+function createListItem() {
 
   let taskItem = document.createElement('li');
   // adding the class names to the list items
@@ -50,8 +51,3 @@ const createListItem = () => {
 </svg></span>`;
 
 }
-
-
-
-btn.addEventListener('click', createListItem)
-
